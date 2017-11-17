@@ -74,16 +74,16 @@ class DogAPI():
 
         # Compacta mensaje y convierte en una lista
         razas = self._compacta_razas(mensaje)
-        archivo = open(
-            r'C:\Users\javie\Documents\001 - LCIk\2017_02\Paradigmas de la Programación\jagua-maravichu\razas.pickle', 'wb')
 
+        archivo = open(r'razas.pickle', 'wb')
         pickle.dump(razas, archivo)
         archivo.close()
 
     def obtener_razas(self):
         razas = []
 
-        archivo = open(
-            r'C:\Users\javie\Documents\001 - LCIk\2017_02\Paradigmas de la Programación\jagua-maravichu\razas.pickle', 'rb')
+        archivo = open(r'razas.pickle', 'rb')
         razas = pickle.load(archivo)
+        archivo.close()
+
         return razas

@@ -1,6 +1,7 @@
 """
 Modulo podio.py
 """
+import pickle
 
 
 class Podio():
@@ -21,6 +22,16 @@ class Podio():
                     nombre=nombre, puntos=puntos))
                 self.puntajes.pop()
                 break
+
+    def _actualizar(self):
+        archivo = open(r'podio.pickle', 'wb')
+        pickle.dump(self.puntajes, archivo)
+        archivo.close()
+
+    def cargar(self):
+        archivo = open(r'podio.pickle', 'rb')
+        self.puntajes = pickle.load(archivo)
+        archivo.close()
 
     def desplegar(self):
         for puntaje in self.puntajes:
