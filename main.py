@@ -9,9 +9,10 @@ from podio import Podio
 
 def main():
 
-    print('=========================================================')
-    print('==                   Jagua Maravichu                   ==')
-    print('=========================================================')
+    ancho = 72
+    print('=' * ancho)
+    print('Jagua Maravichu'.center(ancho))
+    print('=' * ancho)
     razas = []
     opciones = []
 
@@ -39,8 +40,8 @@ def main():
                 print('No hay conexión a Internet </3')
                 break
 
-            print('==================== Pregunta No. ' +
-                  str(i + 1) + ' ====================')
+            print((' Pregunta No. ' +
+                   str(i + 1) + ' ').center(ancho, '-'))
 
             imagen = api.obtener_imagen()
             print(imagen['url'])
@@ -71,7 +72,7 @@ def main():
         print(nombre + ', tu puntaje final es: ' + str(puntos))
         podio.cargar_puntaje(nombre, puntos)
 
-        print('==================== Puntuaciones ====================')
+        print(' Puntuaciones '.center(ancho, '='))
         podio.desplegar()
 
     podio._actualizar()
