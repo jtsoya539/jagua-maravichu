@@ -35,5 +35,5 @@ class Podio():
 
     def desplegar(self):
         for puntaje in self.puntajes:
-            print('Nombre: ' + puntaje['nombre'] +
-                  ' Puntos: ' + str(puntaje['puntos']))
+            print('Nombre: ' + str(puntaje['nombre']).ljust(15) +
+                  ' Puntos: ' + str(puntaje['puntos']).rjust(6))
