@@ -1,5 +1,5 @@
 """
-Modulo main.py
+Iniciar la aplicacion.
 """
 import random
 
@@ -8,6 +8,9 @@ from podio import Podio
 
 
 def main():
+    """
+    Iniciar la aplicacion.
+    """
 
     ancho = 72
     print('=' * ancho)
@@ -36,7 +39,7 @@ def main():
 
         for i in range(cantidad):
 
-            if not api._hay_conexion():
+            if not api.hay_conexion():
                 print('No hay conexión a Internet </3')
                 break
 
@@ -70,12 +73,12 @@ def main():
             puntos = round(((correctas / cantidad) * 100), 2)
 
         print(nombre + ', tu puntaje final es: ' + str(puntos))
-        podio.cargar_puntaje(nombre, puntos)
+        podio.ingresar_puntaje(nombre, puntos)
 
         print(' Puntuaciones '.center(ancho, '='))
         podio.desplegar()
 
-    podio._actualizar()
+    podio.actualizar()
     print('Chauuu!! Nos vemos pronto woof woof')
 
 
