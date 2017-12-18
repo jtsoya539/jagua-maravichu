@@ -53,3 +53,15 @@ class Podio():
         for puntaje in self.puntajes:
             print('Nombre: ' + str(puntaje['nombre']).ljust(15) +
                   ' Puntos: ' + ('%.2f' % puntaje['puntos']).rjust(6))
+
+    def to_string(self):
+        """
+        Retornar una cadena que representa el podio.
+        """
+        cadena = ''
+        for puntaje in self.puntajes:
+            cadena = cadena + 'Nombre: ' + \
+                str(puntaje['nombre']).ljust(15) + ' Puntos: ' + \
+                ('%.2f' % puntaje['puntos']).rjust(6) + '\n'
+
+        return cadena
