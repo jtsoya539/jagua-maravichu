@@ -1,4 +1,4 @@
-namespace JaguaMaravichuCore
+namespace JaguaMaravichu.Core
 {
     class DogImage
     {

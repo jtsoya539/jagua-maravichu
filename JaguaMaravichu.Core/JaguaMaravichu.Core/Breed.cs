@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace JaguaMaravichuCore
+namespace JaguaMaravichu.Core
 {
     class Breed
     {
