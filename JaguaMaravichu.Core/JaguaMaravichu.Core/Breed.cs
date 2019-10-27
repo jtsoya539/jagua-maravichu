@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace JaguaMaravichu.Core
 {
-    class Breed
+    public class Breed
     {
         public string Id { get; set; }
         public string Name { get; set; }

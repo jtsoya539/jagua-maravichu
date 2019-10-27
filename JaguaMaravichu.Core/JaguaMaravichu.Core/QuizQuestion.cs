@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace JaguaMaravichu.Core
 {
-    class QuizQuestion
+    public class QuizQuestion
     {
         public DogImage Image { get; set; }
         public List<Breed> Options { get; set; }

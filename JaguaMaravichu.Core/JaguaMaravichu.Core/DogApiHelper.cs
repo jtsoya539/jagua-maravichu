@@ -7,7 +7,7 @@ using Newtonsoft.Json.Linq;
 
 namespace JaguaMaravichu.Core
 {
-    class DogApiHelper
+    public class DogApiHelper
     {
         public static List<Breed> Breeds { get; set; }
         private static readonly HttpClient client = new HttpClient();
