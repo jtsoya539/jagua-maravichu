@@ -10,7 +10,11 @@
             Command="{Binding AboutUsCommand}"
             Order="Primary"
             Priority="0"
-            Text="About Us" />
+            Text="About Us">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="FontAwesomeSolid" Glyph="&#xf129;" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <Grid>
