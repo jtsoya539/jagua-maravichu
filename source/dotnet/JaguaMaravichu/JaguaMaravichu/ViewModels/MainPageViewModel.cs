@@ -40,5 +40,14 @@ namespace JaguaMaravichu.ViewModels
         {
             return true;
         }
+
+        private DelegateCommand _AboutUsCommand;
+        public DelegateCommand AboutUsCommand =>
+            _AboutUsCommand ?? (_AboutUsCommand = new DelegateCommand(ExecuteAboutUsCommand));
+
+        void ExecuteAboutUsCommand()
+        {
+            NavigationService.NavigateAsync("AboutUsPage");
+        }
     }
 }

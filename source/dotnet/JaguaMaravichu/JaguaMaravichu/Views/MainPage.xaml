@@ -5,6 +5,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="{Binding Title}">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding AboutUsCommand}"
+            Order="Primary"
+            Priority="0"
+            Text="About Us" />
+    </ContentPage.ToolbarItems>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
